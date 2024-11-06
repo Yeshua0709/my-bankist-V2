@@ -13,6 +13,7 @@ const Footer = ({transactions}) => {
 
         transaction > 0 ? inMoney  += transaction : outMoney +=transaction;
 
+        return 0;
       })}
 
         <div className="money-movement">
