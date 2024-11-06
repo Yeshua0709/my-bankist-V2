@@ -1,13 +1,302 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Poppins',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+ 
 }
 
+body,html{
+
+}
+*{
+  padding: 0;
+  margin:0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.main-container{
+  width: 100%;
+  height: 100vh;
+  background: #1c1c1c;
+}
+
+
+.login-container{
+display: flex;
+background-color: white;
+justify-content: space-between;
+margin:0 auto;
+padding:1em 1.5em;
+border-radius: 25px;
+
+background: #09d0a3;
+}
+
+.main-container{
+  padding:2em;
+}
+
+.login-container .name{
+  color:white;
+  font-size: 1.5em;
+
+  font-family: 'Poppins', sans-serif;
+}
+
+.form-input{
+  background:none;
+  border: 2px solid white;
+  margin-left: 1em;
+  padding: 10px;
+  border-radius: 20px;
+  color:white;
+}
+
+.submit-btn {
+  background: none;
+  border:1px solid white;
+text-transform: uppercase;
+width: 40px;
+height: 40px;
+border-radius: 50%;
+font-size: 8px;
+color:#09d0a3;
+background-color: white;
+margin-left: 1em;
+}
+
+
+.not-loggedin{
+  color:white;
+  text-transform: uppercase;
+
+  margin-top: 10em;
+
+}
+
+.summary{
+  color:white;
+  width: 1300px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-top: 2em;
+
+}
+
+
+.summary-left{
+  text-align: left;
+  margin-top: 5px;
+}
+
+.summary-left .title{
+  font-size: 1.8em;
+}
+
+
+.summary-right{
+  font-size: 3.5em;
+}
+
+.card{
+  
+  width: 100%;
+ 
+}
+
+/* For WebKit-based browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 8px;  /* Slim width */
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* Transparent track for a minimal look */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #fff; /* Scrollbar color */
+  border-radius: 20px; /* Rounded corners */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin; /* Slim width */
+  scrollbar-color: #fff transparent; /* Color of the scrollbar and background */
+
+}
+
+
+
+.transaction-container{
+  width: 100%;
+  max-height: 65vh;
+  overflow-y: scroll;
+  
+}
+
+.status{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background:white;
+  padding: 20px 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  
+}
+
+.withdraw{
+  background: #ef4444;
+ 
+}
+
+.deposit{
+  background: #09d0a3;
+}
+
+.transaction_status{
+  width: 15%;
+  padding: 5px;
+  font-size: 13px;
+  text-transform: uppercase;
+  border-radius: 15px;
+  color:white;
+  font-weight: 600;
+}
+
+.running-total{
+  text-align: right;
+ 
+  width: 60%;
+  font-size: 1.3em;
+  color:#3b3c40;
+  font-weight: 500;
+}
+
+.amount{
+  width: 23%;
+  text-align: center;
+
+}
+
+.feature-container{
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.left{
+  width: 70%;
+}
+
+.right{
+  width: 29%;
+}
+
+
+.loan-card, .withdraw-card{
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 1em;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-left: 1em;
+}
+.loan-card{
+  background: rgb(19,210,167);
+  background: linear-gradient(110deg, rgba(19,210,167,1) 0%, rgba(74,236,200,1) 66%);
+}
+
+.withdraw-card{
+  background: rgb(253,172,3);
+  background: linear-gradient(110deg, rgba(253,172,3,1) 0%, rgba(253,194,8,1) 66%);
+}
+
+.withdraw-card p, .loan-card p{
+  margin-bottom: .5em;
+}
+
+.input-wl{
+  border:none;
+  background-color: rgb(255,255,255,.5);
+  border-radius: 5px;
+  padding:4px;
+  margin-right: .5em;
+}
+
+.wl-form{
+
+  display: flex;
+}
+.wl-sub{
+  border:none;
+  background:white;
+padding-top:4.5px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  padding-left: 2px;
+}
+
+.wl-sub svg{
+  color:#191919;
+  
+}
+
+.money-movement{
+  color:white;
+  text-transform: uppercase;
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.window{
+  display: flex;
+
+  margin-right: 1em;
+  align-items: center;
+ 
+}
+
+.window .value{
+  font-size: 1.8em;
+}
+
+.window .label svg{
+margin-top: 10px;
+}
+
+.up{
+  color:rgb(19,210,167);;
+}
+
+.down{
+  color:#ef4444;
+}
+
+.starter{
+  color:white;
+}
+
+.starter p{
+  margin-bottom: -4px;
 }
